@@ -1,5 +1,5 @@
 # doggo-ajax
 
-loading icon:
+running dog icon:
 Pet Adoption Loader
 by Daniel Rasmussen
