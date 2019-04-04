@@ -8,13 +8,27 @@
     <title>Dogs</title>
   </head>
   <body>
-    <h1 class="app-title">Doggos</h1>
+    <header class="header">
+      <h1 class="app-title">Doggos</h1>
+      <img
+        class="header-img"
+        src="./imageedit_4_3818450026.gif"
+        alt="loading icon"
+      />
+      <!-- <h1 class="app-title">Doggos</h1> -->
+    </header>
+
     <div class="carouselbox">
       <div class="buttons">
         <button class="prev">◀ <span class="offscreen">Previous</span></button>
         <button class="next"><span class="offscreen">Next</span> ▶</button>
       </div>
-      <div class="doggos"></div>
+      <div class="doggos">
+        <div id="loading-icon">
+          <img src="./Loading_icon_cropped.gif" alt="loading icon" />
+        </div>
+        <!-- <div class="images-container"></div> -->
+      </div>
     </div>
     <button class="add-dog">Add dog</button>
     <script src="./doggos.js"></script>
