@@ -10,10 +10,13 @@ const addNewDog = () => {
       return processingPromise;
     })
     .then(processedResponse => {
+      const div = document.createElement("div");
+      div.className = "image";
       const img = document.createElement("img");
       img.src = processedResponse.message;
       img.alt = "Cute dog";
-      doggos.appendChild(img);
+      div.appendChild(img);
+      doggos.appendChild(div);
     });
 };
 
