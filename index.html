@@ -20,19 +20,25 @@
 
     <main class="main-container">
       <div class="user-UI">
-        <select class="breed-selector">
-          <option selected>All</option>
-        </select>
-        <button class="add-dog">Add dog</button>
+        <div class="select-section">
+          <label class="select-label">☞ Choose a breed:</label>
+          <select class="breed-selector">
+            <option>All</option>
+          </select>
+        </div>
+
+        <button class="add-dog-btn">
+          <span class="btn-text">Take a shot </span> 📷
+        </button>
       </div>
 
       <div class="carouselbox">
-        <div class="buttons">
+        <!-- <div class="buttons">
           <button class="prev">
             ◀ <span class="offscreen">Previous</span>
           </button>
           <button class="next"><span class="offscreen">Next</span> ▶</button>
-        </div>
+        </div> -->
         <div class="doggos">
           <div id="loading-icon">
             <img src="./Loading_icon_cropped.gif" alt="loading icon" />

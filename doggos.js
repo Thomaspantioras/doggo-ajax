@@ -13,15 +13,13 @@ const showSpinner = () => {
   });
   setTimeout(() => {
     document.getElementById("loading-icon").style.display = "none";
-    // let count = 0;
     imageBoxes.forEach(box => {
       box.className = "image-box";
-      // box.style.order = count--;
     });
   }, 1000);
 };
 
-//ideally is called when the response is received
+/* ideally this is called when the response is received. */
 // const hideSpinner = () => {
 //   document.getElementById("loading-icon").style.display = "none";
 // };
@@ -36,24 +34,26 @@ const selectBreed = () => {
     })
     .then(processedResponse => {
       const breeds = Object.keys(processedResponse.message);
-      console.log(breeds);
 
       breeds.forEach(breed => {
         const option = document.createElement("option");
-        console.log(option);
         option.className = "breed-name";
         option.value = breed;
         option.text = breed;
-        // breedSelector.appendChild(option);
+
         breedSelector.add(option);
       });
     });
 };
+
 let count = 0;
 const addNewDog = () => {
+  let breedName = breedSelector.options[breedSelector.selectedIndex].text;
+  let breed_url = `https://dog.ceo/api/breed/${breedName}/images/random`;
+
   showSpinner();
 
-  const promise = fetch(DOG_URL);
+  const promise = breedName === "All" ? fetch(DOG_URL) : fetch(breed_url);
   promise
     .then(response => {
       const processingPromise = response.json();
@@ -79,4 +79,4 @@ document
   .querySelector(".breed-selector")
   .addEventListener("click", selectBreed);
 
-document.querySelector(".add-dog").addEventListener("click", addNewDog);
+document.querySelector(".add-dog-btn").addEventListener("click", addNewDog);
