@@ -1,0 +1,24 @@
+{
+  "name": "doggos",
+  "version": "1.0.0",
+  "description": "running dog icon: Pet Adoption Loader by Daniel Rasmussen",
+  "main": "doggos.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Thomaspantioras/doggo-ajax.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Thomaspantioras/doggo-ajax/issues"
+  },
+  "homepage": "https://github.com/Thomaspantioras/doggo-ajax#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}
