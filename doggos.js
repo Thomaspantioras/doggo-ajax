@@ -6,14 +6,14 @@ const breedSelector = document.querySelector(".breed-selector");
 let dogBreed;
 
 const showSpinner = () => {
-  document.getElementById("loading-icon").style.display = "flex";
   let imageBoxes = document.querySelectorAll(".image-box");
-  imageBoxes.forEach(box => {
+  imageBoxes.forEach((box) => {
     box.className = "image-box hidden";
   });
+  document.getElementById("loading-icon").style.display = "flex";
   setTimeout(() => {
     document.getElementById("loading-icon").style.display = "none";
-    imageBoxes.forEach(box => {
+    imageBoxes.forEach((box) => {
       box.className = "image-box";
     });
   }, 1000);
@@ -28,14 +28,14 @@ const selectBreed = () => {
   const promise = fetch(BREEDS_LIST);
 
   promise
-    .then(response => {
+    .then((response) => {
       const processingResponse = response.json();
       return processingResponse;
     })
-    .then(processedResponse => {
+    .then((processedResponse) => {
       const breeds = Object.keys(processedResponse.message);
 
-      breeds.forEach(breed => {
+      breeds.forEach((breed) => {
         const option = document.createElement("option");
         option.className = "breed-name";
         option.value = breed;
@@ -55,11 +55,11 @@ const addNewDog = () => {
 
   const promise = breedName === "All" ? fetch(DOG_URL) : fetch(breed_url);
   promise
-    .then(response => {
+    .then((response) => {
       const processingPromise = response.json();
       return processingPromise;
     })
-    .then(processedResponse => {
+    .then((processedResponse) => {
       const div = document.createElement("div");
       div.className = "image-box";
       div.style.order = count--;
@@ -72,7 +72,7 @@ const addNewDog = () => {
 
       // hideSpinner();
     })
-    .catch(err => console.error(err));
+    .catch((err) => console.error(err));
 };
 
 document

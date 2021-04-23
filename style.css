@@ -1,23 +1,25 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
+  /* padding: 10px; */
 }
 .header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 4rem;
 }
 
 .app-title {
   font-family: Chalkduster;
-  font-size: 40px;
-  margin-right: 48%;
+  font-size: 6rem;
 }
 
 .header-img {
@@ -28,8 +30,10 @@
 .main-container {
   display: flex;
   /* flex-direction: row; */
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  justify-content: space-evenly;
   /* align-items: flex-start; */
+  padding: 6rem;
 }
 
 .user-UI {
@@ -37,38 +41,40 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 }
 
 .select-section {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  /* align-items: flex-end; */
 }
 
 .select-label {
-  font-size: 30px;
+  font-size: 2.5rem;
 }
 .breed-selector {
-  width: 10em;
-  height: 40px;
-  font-size: 1rem;
+  width: 14rem;
+  height: 3rem;
+  font-size: 1.5rem;
   padding: 2px 5px;
+  margin: 1rem 4rem;
 }
 
 .add-dog-btn {
+  margin: 4rem;
   background-color: transparent;
   cursor: pointer;
   border: none;
-  font-size: 38px;
+  font-size: 3.5rem;
   /* margin-top: 18rem; */
-  padding: 15px 32px;
+  /* padding: 15px 32px; */
 }
 .btn-text {
   font-family: Chalkduster;
   font: normal;
-  font-size: 30px;
-  font-style: italic;
+  font-size: 2.5rem;
+  /* font-style: italic; */
 }
 
 .doggos {
