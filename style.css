@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: Chalkduster;
 }
 
 .body {
@@ -9,15 +10,14 @@
   flex-direction: column;
   align-items: center;
 }
+
+button:focus {
+  outline: 1px dashed wheat;
+}
+
 .header {
   display: flex;
   justify-content: center;
-  padding: 4rem;
-}
-
-.app-title {
-  font-family: Chalkduster;
-  font-size: 6rem;
 }
 
 .header-img {
@@ -25,64 +25,33 @@
   width: auto;
 }
 
-.main-container {
-  display: flex;
-  justify-content: space-evenly;
-  padding: 6rem;
-}
-
-.user-UI {
-  font-family: Chalkduster;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.select-section {
-  display: flex;
-  flex-direction: column;
-}
-
 .select-label {
-  font-size: 2.5rem;
-}
-.breed-selector {
-  width: 14rem;
-  height: 3rem;
   font-size: 1.5rem;
-  padding: 2px 5px;
-  margin: 1rem 4rem;
 }
 
-button:focus {
-  outline: 1px dashed wheat;
+.breed-selector {
+  font-size: 1.2rem;
+  padding: 2px 5px;
+  margin: 1rem 2rem;
+}
+
+.btn-text {
+  font-size: 1.5rem;
 }
 
 .add-dog-btn {
-  margin: 4rem;
-  padding: 1rem;
+  font-size: 2.5rem;
   background-color: transparent;
   cursor: pointer;
   border: none;
-  font-size: 3.5rem;
-}
-.btn-text {
-  font-family: Chalkduster;
-  font: normal;
-  font-size: 2.5rem;
 }
 
 .doggos {
   display: flex;
-  flex-direction: row-reverse;
-  margin-top: 10px;
-  /* allow for scrolling */
-  overflow-x: auto;
+  flex-direction: column;
 }
 
 .carouselbox {
-  width: 45rem;
-  height: 31rem;
   border: 1px solid #ccc;
   box-shadow: 2px 2px 10px #ccc;
   overflow: hidden;
@@ -96,17 +65,6 @@ button:focus {
   height: 500px;
   width: 100%;
 }
-
-#loading-icon > img {
-  /* padding: 1em; */
-  flex-shrink: 0;
-  width: auto;
-  height: 25%;
-}
-/* .images-container {
-  display: flex;
-  overflow-x: auto;
-} */
 
 .image-box {
   display: flex;
@@ -125,4 +83,66 @@ button:focus {
 
 .hidden {
   display: none;
+}
+
+@media (min-width: 850px) {
+  .header {
+    padding: 4rem;
+  }
+
+  .app-title {
+    font-size: 6rem;
+  }
+
+  .main-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 6rem;
+  }
+
+  .user-UI {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .select-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .select-label {
+    font-size: 2.5rem;
+  }
+
+  .breed-selector {
+    width: 14rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    padding: 2px 5px;
+    margin: 1rem 4rem;
+  }
+
+  .add-dog-btn {
+    margin: 4rem;
+    padding: 1rem;
+    font-size: 3.5rem;
+  }
+  .doggos {
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    /* allow for scrolling */
+    overflow-x: auto;
+  }
+
+  .carouselbox {
+    width: 45rem;
+    height: 31rem;
+  }
+
+  #loading-icon > img {
+    flex-shrink: 0;
+    width: auto;
+    height: 25%;
+  }
 }
