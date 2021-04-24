@@ -87,7 +87,7 @@ button:focus {
 
 @media (min-width: 850px) {
   .header {
-    padding: 4rem;
+    padding: 0 4rem;
   }
 
   .app-title {
