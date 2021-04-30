@@ -1,8 +1,16 @@
+@font-face {
+  font-family: "Chalkduster Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Chalkduster Regular"), url("Chalkduster.woff") format("woff");
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: Chalkduster;
+  /* font-family: Chalkduster; */
+  font-family: Chalkduster Regular;
 }
 
 .body {
